@@ -22,7 +22,7 @@ apply plugin: 'org.springframework.boot'
 task buildDocker(type: Docker, dependsOn: build) {
     push = false
     applicationName = jar.baseName
-    dockerfile = file('Dockerfile')
+    dockerfile = file('DockerFile')
     doFirst {
         copy {
             from jar
